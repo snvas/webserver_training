@@ -1,34 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   BindingSocket.hpp                                  :+:      :+:    :+:   */
+/*   ListeningSocket.hpp                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: snovaes <snovaes@student.42sp.org.br>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/04/22 22:48:46 by snovaes           #+#    #+#             */
-/*   Updated: 2023/04/22 23:07:49 by snovaes          ###   ########.fr       */
+/*   Created: 2023/04/22 23:13:51 by snovaes           #+#    #+#             */
+/*   Updated: 2023/04/23 00:33:26 by snovaes          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/*This class implements a call to the bind() function fo sockets as a definition
- * of the connect_to_network virtual function from SimpleSocket*/
+#ifndef ListeningSocket_hpp
+#define ListeningSocket_hpp
 
-#ifndef BindingSocket_hpp
-#define BindingSocket_hpp
-
-#include "SimpleSocket.hpp"
+#include "BindingSocket.hpp"
 #include <stdio.h>
 
 namespace SNVAS
 {
-class BindingSocket : public SimpleSocket
+
+class ListeningSocket : public BindingSocket
 {
+      private:
+	int backlog;
+	int listening;
+
       public:
-	// Constructor
-	BindingSocket(int domain, int service, int protocol, int port,
-		      u_long interface);
-	// Virtual function from parent
-	int connect_to_network(int sock, struct sockaddr_in address);
+	ListeningSocket(int domain, int service, int protocol, int port,
+			u_long interface, int bklog);
+	void start_listening();
+	int get_listening();
+	int get_backlog();
 };
 } // namespace SNVAS
 

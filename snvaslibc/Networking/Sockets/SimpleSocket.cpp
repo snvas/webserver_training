@@ -6,7 +6,7 @@
 /*   By: snovaes <snovaes@student.42sp.org.br>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/22 22:48:26 by snovaes           #+#    #+#             */
-/*   Updated: 2023/04/22 22:56:23 by snovaes          ###   ########.fr       */
+/*   Updated: 2023/04/23 00:55:05 by snovaes          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ SNVAS::SimpleSocket::SimpleSocket(int domain, int service, int protocol,
 }
 
 // test connection virtual function
-SNVAS::SimpleSocket::test_connection(int item_to_test)
+void SNVAS::SimpleSocket::test_connection(int item_to_test)
 {
 	// check if the socket is connected
 	if (item_to_test < 0)
@@ -47,12 +47,8 @@ int SNVAS::SimpleSocket::get_sock()
 	return sock;
 }
 
-int SNVAS::SimpleSocket::get_connection()
-{
-	return connection;
-}
 // Setter functions
 void SNVAS::SimpleSocket::set_connection(int con)
 {
-	connection = con;
+	sock = con;
 }
