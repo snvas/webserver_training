@@ -6,7 +6,7 @@
 /*   By: snovaes <snovaes@student.42sp.org.br>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/22 23:04:51 by snovaes           #+#    #+#             */
-/*   Updated: 2023/04/22 23:08:21 by snovaes          ###   ########.fr       */
+/*   Updated: 2023/04/23 01:48:10 by snovaes          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,9 +27,9 @@ class ConnectingSocket : public SimpleSocket
 	ConnectingSocket(int domain, int service, int protocol, int port,
 		      u_long interface);
 	// Virtual function from parent
-	int connect_to_network(int sock, struct sockaddr_in address);
+	void connect_to_network(int sock, struct sockaddr_in address);
 };
 } // namespace SNVAS
 
 
-#endif /* ConnectingSocket
+#endif //* ConnectingSocket

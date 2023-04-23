@@ -1,20 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   snvaslibc.hpp                                      :+:      :+:    :+:   */
+/*   snvas-networking.hpp                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: snovaes <snovaes@student.42sp.org.br>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/04/22 22:48:16 by snovaes           #+#    #+#             */
-/*   Updated: 2023/04/23 01:22:07 by snovaes          ###   ########.fr       */
+/*   Created: 2023/04/23 01:20:22 by snovaes           #+#    #+#             */
+/*   Updated: 2023/04/23 01:21:21 by snovaes          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-
-#ifndef snvaslibc_hpp
-#define snvaslibc_hpp
+#ifndef snvas_networking_hpp
+#define snvas_networking_hpp
 
 #include <stdio.h>
-#include "Networking/snvaslib-networking.hpp"
+#include "Sockets/snvaslib-sockets.hpp"
 
-#endif 
+
+#endif
